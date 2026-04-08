@@ -1,0 +1,38 @@
+Q1. Key Differences between SQL and NoSQL Databases (with examples)
+Answer 
+. Data Structure → SQL databases store data in tables (rows & columns), while NoSQL stores data in documents, key-value pairs, or graphs
+. Schema → SQL has a fixed schema, whereas NoSQL has a flexible/dynamic schema
+. Scalability → SQL follows vertical scaling (increase server power), NoSQL supports horizontal scaling (add more servers)
+. Consistency → SQL ensures strong consistency using ACID properties, while NoSQL often uses eventual consistency
+. Use Case → SQL is used for structured data (banking, hospital), NoSQL for large unstructured data (social media, IoT)
+ Example: MySQL (SQL), MongoDB (NoSQL)
+
+ Q2.CAP Theorem Explanation
+Answer
+. CAP theorem states that a distributed system can guarantee only two out of three properties:
+Consistency (C) → all nodes return same data
+Availability (A) → every request gets a response
+Partition Tolerance (P) → system continues despite network failures
+. In case of network partition, the system must choose between:
+CP (Consistency + Partition Tolerance)
+AP (Availability + Partition Tolerance)
+
+ Q3. Scenarios where MongoDB is Preferred
+ Answer
+. Social Media Platforms → handles large amounts of unstructured data like posts, images, comments
+. IoT Applications → manages continuous high-volume sensor data efficiently
+. Content Management Systems (CMS) → flexible schema allows frequent changes in content
+
+Q4. Why MongoDB Uses BSON Instead of JSON
+Answer
+. BSON (Binary JSON) supports additional data types such as Date, Binary, and ObjectId
+. It is faster to encode and decode compared to JSON
+. Provides efficient storage and indexing
+. Improves query performance inside MongoDB
+
+Q5. MongoDB Query (GPA > 3.5 and enrolled in CS101)
+Answer
+db.students.find({
+  GPA: { $gt: 3.5 },
+  course: "CS101"
+})

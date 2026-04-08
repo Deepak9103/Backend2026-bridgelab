@@ -1,0 +1,45 @@
+
+Q1. Online Banking System 
+answer: SQL Database
+. Requires ACID properties  ensures reliable transactions
+. Needs high data consistency no errors in money transfer
+. Data is structured (accounts, transactions)
+. Supports security and constraints
+  Justification: Banking systems cannot tolerate errors, so SQL is best.
+
+
+Q2. Social Media Platform 
+Answer: NoSQL Database
+. Handles large unstructured data (posts, images, videos)
+. Requires high scalability** (millions of users)
+. Schema is flexible and dynamic**
+. Provides high availability**
+Justification: NoSQL efficiently manages big and changing data.
+
+Q3. Real-time Chat Application 
+Answer: NoSQL Database
+. Needs fast read/write operations
+. Handles high volume of messages
+. Requires low latency (real-time delivery)
+. Flexible data model for chats
+  Justification: NoSQL supports speed and scalability needed for chat apps.
+
+
+Q4. Hospital Patient Records 
+Answer: SQL Database
+. Requires high accuracy and consistency.
+. Data is structured (patients, reports)
+. Needs strong security and privacy
+. Maintains relationships between data
+Justification: SQL ensures reliable and secure medical records.
+
+
+
+Q5. IoT Sensor Data Collection 
+Answer: NoSQL Database
+. Handles massive continuous data streams
+. Data is semi-structured
+.Needs high scalability and performance
+.Supports distributed systems
+ Justification: NoSQL is ideal for handling large, fast IoT data.
+

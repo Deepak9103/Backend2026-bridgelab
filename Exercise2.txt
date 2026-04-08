@@ -1,0 +1,31 @@
+Q1. Stock Trading Platform
+Answer: CP (Consistency + Partition Tolerance)
+. Requires strong consistency → correct stock prices and transactions
+. Cannot allow stale or incorrect data
+. System must handle network failures (partition tolerance)
+. Availability can be sacrificed temporarily
+Justification: Correct data is critical in trading, so consistency is prioritized over availability.
+
+Q2. Content Delivery Network (CDN)
+Answer: AP (Availability + Partition Tolerance)
+. Needs high availability → content must always be accessible
+. Can tolerate slightly outdated data (eventual consistency)
+. Works across distributed global servers
+. Handles network partitions effectively
+Justification: Fast and always-available content is more important than perfect consistency.
+
+Q3. Airline Booking System
+Answer: CP (Consistency + Partition Tolerance)
+. Requires accurate seat booking (no double booking)
+. Strong consistency is essential
+. Must handle distributed systems (partition tolerance)
+. Availability may be reduced during failures
+Justification: Avoiding booking conflicts is critical, so consistency is prioritized.
+
+Q4. Video Streaming Service
+Answer: AP (Availability + Partition Tolerance)
+. Requires high availability → users should always access videos
+. Can tolerate minor delays or outdated data
+. Distributed across multiple servers globally
+. Ensures smooth streaming even during failures
+Justification: Continuous service is more important than strict consistency.

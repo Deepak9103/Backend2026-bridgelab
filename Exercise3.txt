@@ -1,0 +1,80 @@
+
+
+Q1. Adding New Books
+Answer
+db.books.insertOne({
+  title: "The Alchemist",
+  author: "Paulo Coelho",
+  genre: "Fiction",
+  available: true,
+  publishedYear: 1988
+})
+
+You can also add multiple books:
+
+db.books.insertMany([
+{
+  title: "Harry Potter",
+  author: "J.K. Rowling",
+  genre: "Fantasy",
+  available: true,
+  publishedYear: 1997
+},
+{
+  title: "Rich Dad Poor Dad",
+  author: "Robert Kiyosaki",
+  genre: "Finance",
+  available: true,
+  publishedYear: 1997
+}
+])
+
+
+
+Q2. Finding Books by Author
+Answer
+db.books.find({
+  author: "J.K. Rowling"
+})
+
+To display only selected fields:
+
+db.books.find(
+  { author: "J.K. Rowling" },
+  { _id: 0, title: 1, genre: 1 }
+)
+
+---
+
+Q3. Updating Book Availability
+Answer
+db.books.updateOne(
+  { title: "Harry Potter" },
+  { $set: { available: false } }
+)
+
+To mark a book as returned:
+
+db.books.updateOne(
+  { title: "Harry Potter" },
+  { $set: { available: true } }
+)
+
+
+
+Q4. Tracking Borrowed Books by User
+Answer
+db.borrowedBooks.insertOne({
+  userName: "Sarthak",
+  bookTitle: "Harry Potter",
+  borrowDate: new Date(),
+  returnDate: null
+})
+
+To find borrowed books by a specific user:
+
+db.borrowedBooks.find({
+  userName: "Sarthak"
+})
+
+
